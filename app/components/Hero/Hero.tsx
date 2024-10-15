@@ -7,10 +7,10 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="bg-[#C1DCDC] mx-16 flex rounded-2xl justify-between p-9">
-      <div className="flex flex-col gap-10">
-        <div className="text-7xl font-extrabold">Buy your dream plants</div>
-        <div className="text-4xl flex">
+    <div className="bg-[#C1DCDC] md:mx-16 flex flex-col md:flex-row rounded-2xl items-center md:justify-between p-3 md:p-9 gap-4 md:gap-0">
+      <div className="flex flex-col gap-10 items-center md:items-start">
+        <div className="text-3xl md:text-7xl text-center font-extrabold">Buy your dream plants</div>
+        <div className="md:text-4xl flex">
           <div>
             50+ <div>Plant Species</div>
           </div>
@@ -19,7 +19,7 @@ const Hero = () => {
             1000+ <div>customers</div>
           </div>
         </div>
-        <div className="flex w-[50%] max-w-sm items-center space-x-2 relative">
+        <div className="flex w-full md:w-[50%] max-w-sm items-center space-x-2 relative">
           <Input type="text" placeholder="Search for a plant" className="bg-white h-12" />
           <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4 cursor-pointer" />
 
@@ -29,7 +29,7 @@ const Hero = () => {
         <Image
           src={OrchidHero}
           alt="Orchid Intro"
-          className="rounded-s-full h-[350px] w-[250px]"
+          className="rounded-2xl md:rounded-s-full h-[350px] w-[250px]"
         />
       </div>
     </div>

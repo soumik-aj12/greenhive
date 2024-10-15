@@ -3,6 +3,14 @@ import { Leaf, ShoppingCart, User } from "lucide-react";
 import Link from "next/link";
 import UserImage from "./UserImage";
 import MobileHeader from "./MobileHeader";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
 const Header = async () => {
   const user = await auth();
   return (
@@ -32,11 +40,27 @@ const Header = async () => {
             {user ? (
               <UserImage expires={user.expires} user={user.user} />
             ) : (
-              <User />
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" className="focus:border-0">
+                    <User />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuLabel>
+                    <Link href="/login">Login</Link>
+                  </DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+
+                  <DropdownMenuLabel>
+                    <Link href="/register">Register</Link>
+                  </DropdownMenuLabel>
+                </DropdownMenuContent>
+              </DropdownMenu>
             )}
           </div>
         </li>
-        <MobileHeader />
+        <MobileHeader user={user} />
       </ul>
     </header>
   );
