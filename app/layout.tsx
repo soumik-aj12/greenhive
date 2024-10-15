@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Provider from "./provider";
+import Header from "./components/Header/Header";
 
 const pixel = Poppins({
   subsets: ["latin"],
@@ -21,7 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${pixel.className} antialiased`}>
-        <Provider>{children}</Provider>
+        <Provider>
+          <Header/>
+          {children}
+          </Provider>
       </body>
     </html>
   );
