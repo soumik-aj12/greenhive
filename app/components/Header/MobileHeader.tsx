@@ -33,7 +33,7 @@ const MobileHeader = ({user}: any) => {
               </Link>
             </li>
             <li>
-              <Link href="/contact" onClick={toggleMenu}>
+              <Link href="/contact-us" onClick={toggleMenu}>
                 Contact
               </Link>
             </li>

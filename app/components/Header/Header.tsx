@@ -29,7 +29,7 @@ const Header = async () => {
             <Link href="/products">Products</Link>
           </div>
           <div>
-            <Link href="/contact">Contact</Link>
+            <Link href="/contact-us">Contact</Link>
           </div>
         </li>
         <li className="hidden md:flex items-center gap-5">
