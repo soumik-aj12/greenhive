@@ -7,14 +7,14 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="bg-[#C1DCDC] md:mx-16 flex flex-col md:flex-row rounded-2xl items-center md:justify-between p-3 md:p-9 gap-4 md:gap-0">
+    <div className="bg-[#C1DCDC] flex flex-col md:flex-row rounded-2xl items-center md:justify-between p-3 md:p-9 gap-4 md:gap-0">
       <div className="flex flex-col gap-10 items-center md:items-start">
         <div className="text-3xl md:text-7xl text-center font-extrabold">Buy your dream plants</div>
         <div className="md:text-4xl flex">
           <div>
             50+ <div>Plant Species</div>
           </div>
-          <Separator orientation="vertical" className="mx-4 bg-black" />
+          <Separator orientation="vertical" className="mx-4" color="black"/>
           <div>
             1000+ <div>customers</div>
           </div>

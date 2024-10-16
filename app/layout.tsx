@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn("mx-1 md:mx-8",`${pixel.className} antialiased`)}>
+      <body className={cn("mx-1 md:mx-24",`${pixel.className} antialiased`)}>
         <Provider>
           <Header/>
           {children}
