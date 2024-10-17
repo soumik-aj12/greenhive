@@ -1,13 +1,17 @@
-import { StaticImageData } from "next/image"
+import { StaticImageData } from "next/image";
 
-export type BestSellingPlantProps = {
-    ImageSrc: string | StaticImageData
-    Title: string
-    Price: string
-
-}
+export type ProductCardProps = {
+  orientation?: string;
+  title: string;
+  description: string;
+  plants: Array<{
+    image: string | StaticImageData;
+    price: string;
+    plantTitle: string;
+  }>;
+};
 export type AboutCardsProps = {
-    title: string;
-    description: string;
-    icon: React.ReactNode
-}
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+};
