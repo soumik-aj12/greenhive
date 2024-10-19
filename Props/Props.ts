@@ -15,3 +15,9 @@ export type AboutCardsProps = {
   description: string;
   icon: React.ReactNode;
 };
+
+export type CategoryCardProps = {
+  title: string;
+  image: string | StaticImageData;
+  offset: boolean
+};
