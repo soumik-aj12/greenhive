@@ -16,11 +16,11 @@ const MobileHeader = ({user}: any) => {
   };
   return (
     <>
-      <div className="md:hidden">
+      <div className="md:hidden flex items-center">
         <button onClick={toggleMenu}>{isMenuOpen ? <X /> : <Menu />}</button>
       </div>
       {isMenuOpen && (
-        <div className="absolute top-16 left-0 w-full bg-white shadow-lg md:hidden">
+        <div className="absolute top-16 left-0 w-full bg-white shadow-lg md:hidden animate-in fade-in-5 slide-in-from-top-2">
           <ul className="flex flex-col items-center p-5 gap-5">
             <li>
               <Link href="/" onClick={toggleMenu}>

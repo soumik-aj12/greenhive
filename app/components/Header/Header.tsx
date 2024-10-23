@@ -1,5 +1,5 @@
 import { auth } from "@/server/auth";
-import { Leaf, ShoppingCart, User } from "lucide-react";
+import { Leaf, Search, ShoppingCart, User } from "lucide-react";
 import Link from "next/link";
 import UserImage from "./UserImage";
 import MobileHeader from "./MobileHeader";
@@ -10,12 +10,21 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import {
+  Menubar,
+  MenubarMenu,
+  MenubarTrigger,
+  MenubarContent,
+  MenubarItem,
+} from "@/components/ui/menubar";
 import { Button } from "@/components/ui/button";
+import Searchbar from "./Searchbar";
+import Cart from "./Cart";
 const Header = async () => {
   const user = await auth();
   return (
     <header>
-      <ul className="flex justify-between m-7 px-5">
+      <ul className="flex justify-between items-center m-7 md:px-5">
         <Link href="/">
           <div className="flex gap-2">
             <Leaf /> GREENHIVE
@@ -32,35 +41,37 @@ const Header = async () => {
             <Link href="/contact-us">Contact</Link>
           </div>
         </li>
-        <li className="hidden md:flex items-center gap-5">
-          <div>
-            <ShoppingCart />
+        <li className="md:flex items-center gap-5">
+          <div className="flex gap-2 items-center">
+            <Searchbar />
+            <Cart />
+            <MobileHeader user={user} />
           </div>
-          <div>
+          <div className="hidden md:flex">
             {user ? (
               <UserImage expires={user.expires} user={user.user} />
             ) : (
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="focus:border-0">
-                    <User />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent>
-                  <DropdownMenuLabel>
-                    <Link href="/login">Login</Link>
-                  </DropdownMenuLabel>
-                  <DropdownMenuSeparator />
-
-                  <DropdownMenuLabel>
-                    <Link href="/register">Register</Link>
-                  </DropdownMenuLabel>
-                </DropdownMenuContent>
-              </DropdownMenu>
+              <Menubar className="p-0 m-0 border-0">
+                <MenubarMenu>
+                  <MenubarTrigger>
+                    <Button variant="ghost" className="m-0 p-0 focus:border-0">
+                      <User />
+                    </Button>
+                  </MenubarTrigger>
+                  <MenubarContent>
+                    <MenubarItem>
+                      <Link href="/login">Login</Link>
+                    </MenubarItem>
+                    <DropdownMenuSeparator />
+                    <MenubarItem>
+                      <Link href="/register">Register</Link>
+                    </MenubarItem>
+                  </MenubarContent>
+                </MenubarMenu>
+              </Menubar>
             )}
           </div>
         </li>
-        <MobileHeader user={user} />
       </ul>
     </header>
   );

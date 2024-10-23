@@ -10,7 +10,7 @@ const Categories = () => {
       <div>Find out what you're looking for</div>
       <Separator className="my-3 bg-black w-[25%]"/>
       </div>
-      <div className="flex w-full justify-evenly">{CategoryData.map((data, index) => {
+      <div className="flex flex-col md:flex-row w-full justify-evenly gap-3">{CategoryData.map((data, index) => {
         return <Card key={index} title={data.title} image={data.image} offset={data.offset}/>;
       })}</div>
     </div>

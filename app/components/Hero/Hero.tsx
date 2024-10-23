@@ -19,7 +19,7 @@ const Hero = () => {
             1000+ <div>customers</div>
           </div>
         </div>
-        <div className="flex w-full md:w-[50%] max-w-sm items-center space-x-2 relative">
+        <div className="hidden md:flex w-full md:w-[50%] max-w-sm items-center space-x-2 relative">
           <Input type="text" placeholder="Search for a plant" className="bg-white h-12" />
           <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4 cursor-pointer" />
 

@@ -8,7 +8,7 @@ const Card = ({ title, image, offset }: CategoryCardProps) => {
     <div
       className={cn(
         "flex flex-col items-center gap-2 cursor-pointer transition-all hover:translate-x-1",
-        offset ? "-translate-y-20" : "translate-y-6"
+        offset ? "md:-translate-y-20" : "md:translate-y-6"
       )}
     >
       <div className="relative">

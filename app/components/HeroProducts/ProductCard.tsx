@@ -20,12 +20,12 @@ const ProductCard = ({orientation, title, description, plants }: ProductCardProp
         return (
           <div
             key={index}
-            className="flex flex-col items-center gap-1 cursor-pointer transition-all hover:translate-x-1 hover:-translate-y-1"
+            className="flex flex-col items-center gap-1 cursor-pointer"
           >
             <Image
               src={plant.image}
               alt="Test"
-              className="h-44 w-36 md:h-fit md:w-60 rounded-lg shadow-lg"
+              className="h-44 w-36 md:h-fit md:w-60 rounded-lg shadow-lg transition-all hover:translate-x-1 hover:-translate-y-1"
             />
             <div className="font-bold mt-3">{plant.plantTitle}</div>
             <div className="text-gray-600">₹ {plant.price}</div>
