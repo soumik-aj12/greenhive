@@ -51,7 +51,7 @@ const Header = async () => {
             {user ? (
               <UserImage expires={user.expires} user={user.user} />
             ) : (
-              <Menubar className="p-0 m-0 border-0">
+              <Menubar className="p-0 m-0 border-0 cursor-pointer w-fit">
                 <MenubarMenu>
                   <MenubarTrigger>
                     <Button variant="ghost" className="m-0 p-0 focus:border-0">
@@ -59,7 +59,7 @@ const Header = async () => {
                     </Button>
                   </MenubarTrigger>
                   <MenubarContent>
-                    <MenubarItem>
+                    <MenubarItem >
                       <Link href="/login">Login</Link>
                     </MenubarItem>
                     <DropdownMenuSeparator />

@@ -12,10 +12,10 @@ const Cart = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <ShoppingCart className="hover:bg-gray-50 m-3"/>
+        <ShoppingCart className="cursor-pointer"/>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
-        <DropdownMenuLabel>
+        <DropdownMenuLabel className="flex flex-col gap-2">
           <div>Item 1</div>
           <div className="flex gap-2">
             <Minus className="cursor-pointer text-red-500 border-2 border-gray-200" />
