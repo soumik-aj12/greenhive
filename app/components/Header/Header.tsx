@@ -54,12 +54,10 @@ const Header = async () => {
               <Menubar className="p-0 m-0 border-0 cursor-pointer w-fit">
                 <MenubarMenu>
                   <MenubarTrigger>
-                    <Button variant="ghost" className="m-0 p-0 focus:border-0">
-                      <User />
-                    </Button>
+                    <User />
                   </MenubarTrigger>
                   <MenubarContent>
-                    <MenubarItem >
+                    <MenubarItem>
                       <Link href="/login">Login</Link>
                     </MenubarItem>
                     <DropdownMenuSeparator />

@@ -21,3 +21,10 @@ export type CategoryCardProps = {
   image: string | StaticImageData;
   offset: boolean
 };
+
+export type ReviewProps = {
+  name: string;
+  rating: boolean | number | string;
+  work: string;
+  review: string;
+}

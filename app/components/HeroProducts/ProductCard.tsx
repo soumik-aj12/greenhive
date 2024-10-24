@@ -1,19 +1,35 @@
 import React from "react";
-import { ArrowRight, ShoppingCart } from "lucide-react";
+import { ArrowLeft, ArrowRight, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ProductCardProps } from "@/Props/Props";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-const ProductCard = ({orientation, title, description, plants }: ProductCardProps) => {
+const ProductCard = ({
+  orientation,
+  title,
+  description,
+  plants,
+}: ProductCardProps) => {
   return (
-    <div className= {cn("my-10 mx-3 flex flex-col gap-6", orientation==="reverse"?"md:flex-row-reverse":"md:flex-row")}>
-      <div className={cn("w-full md:w-[30%] flex flex-col items-center",orientation==="reverse"?"md:items-end":"md:items-start")}>
+    <div
+      className={cn(
+        "my-10 mx-3 flex flex-col gap-6",
+        orientation === "reverse" ? "md:flex-row-reverse" : "md:flex-row"
+      )}
+    >
+      <div
+        className={cn(
+          "w-full md:w-[30%] flex flex-col items-center",
+          orientation === "reverse" ? "md:items-end" : "md:items-start"
+        )}
+      >
         <h2 className="mt-5 font-bold text-2xl">{title}</h2>
         <p className="text-sm my-2 text-center md:text-start">{description}</p>
         <Button variant="outline" className="w-[35%] bg-[#C1DCDC] flex gap-1">
+          {orientation === "reverse" && <ArrowLeft className="w-5" />}
           <p>See more</p>
-          <ArrowRight className="w-5" />
+          {orientation !== "reverse" && <ArrowRight className="w-5" />}
         </Button>
       </div>
       {plants.map((plant, index) => {
