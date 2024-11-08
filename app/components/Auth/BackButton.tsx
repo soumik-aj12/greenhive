@@ -6,7 +6,7 @@ import React from 'react'
 
 const BackButton = ({href, label}:{href:string, label: string}) => {
   return (
-    <Button asChild variant="default">
+    <Button asChild variant="default" className='w-full'>
         <Link aria-label={label} href={href}>{label}</Link>
     </Button>
   )

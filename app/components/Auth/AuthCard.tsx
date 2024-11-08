@@ -11,7 +11,7 @@ type CardProps = {
 }
 const AuthCard = ({children, cardTitle,backButtonLabel, backButtonHref, showSocials}:CardProps) => {
   return (
-    <Card className='mx-auto'>
+    <Card className='w-1/4 mx-auto'>
       <CardHeader>{cardTitle}</CardHeader>
       <CardContent>{children}</CardContent>
       {showSocials && (

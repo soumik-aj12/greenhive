@@ -6,9 +6,9 @@ import { redirect } from "next/dist/server/api-utils";
 import { FcGoogle } from "react-icons/fc";
 export default function Socials() {
   return (
-    <div>
+    <div className="w-full ">
       <Button
-        className="flex gap-3"
+        className="w-full flex gap-3"
         variant="outline"
         onClick={() => signIn("google", { redirect: false, callbackUrl: "/" })}
       >

@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowLeft, ArrowRight, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ProductCardProps } from "@/Props/Props";
+import { ProductCardProps } from "@/Types/Props";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
